@@ -1,4 +1,6 @@
 ﻿
+#
+
 Инструкция по запуску проекта
 Для Windows:
 Откройте PowerShell
@@ -31,29 +33,40 @@
 Быстрые команды:
 Windows:
 powershell
-# Активация окружения
+
+## Активация окружения
+
 venv\Scripts\activate
 
-# Установка зависимостей
+## Установка зависимостей
+
 pip install -r requirements.txt
 
-# Запуск БД
+## Запуск БД
+
 docker-compose up -d postgres
 
-# Миграции
+## Миграции
+
 alembic upgrade head
 
-# Создание админа
+## Создание админа
+
 python scripts/create_admin.py
 
-# Запуск сервера
+## Запуск сервера
+
 uvicorn app.main:app --reload
+
 Linux/Mac:
 bash
-# Активация окружения
+
+## Активация окружения Linux/Mac
+
 source venv/bin/activate
 
-# Все команды через make
+## Все команды через make
+
 make install      # установить зависимости
 make docker-up    # запустить БД
 make migrate      # применить миграции
@@ -61,7 +74,7 @@ make create-admin # создать админа
 make dev         # запустить сервер
 make test        # запустить тесты
 Тестирование API:
-Откройте браузер: http://localhost:8000/docs
+Откройте браузер: <http://localhost:8000/docs>
 
 Создайте пользователя через POST /auth/register
 

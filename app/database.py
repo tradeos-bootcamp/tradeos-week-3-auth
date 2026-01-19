@@ -13,7 +13,8 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
 def get_db():
-    ""Получение сессии базы данных""`n    db = SessionLocal()
+    #""Получение сессии базы данных""`n    
+    db = SessionLocal() # pyright: ignore[reportUndefinedVariable]
     try:
         yield db
     finally:

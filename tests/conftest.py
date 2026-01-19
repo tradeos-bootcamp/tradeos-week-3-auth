@@ -7,7 +7,7 @@ from sqlalchemy.orm import sessionmaker, Session
 from app.core.security import create_access_token
 from app.models.user import User, UserRole
 from app.core.security import get_password_hash
-from app.db.session import Base, get_db
+from . import Base, get_db
 from app.main import app
 
 # Тестовая база данных
